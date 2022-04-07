@@ -47,8 +47,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: site-a-ingress
-  namespace: site-a-ns
+  name: default-backend-ingress
+  namespace: default-backend-ns
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
