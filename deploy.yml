@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: default-http-backend
+  name: nginx-default-backend
   namespace: default-backend-ns
 spec:
   selector:
@@ -47,18 +47,25 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: default-backend-ingress
-  namespace: default-backend-ns
+  name: site-a-ingress
+  namespace: site-a-ns
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
     - http:
         paths:
-          - path: /b
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: nginx-default-backend
+                port:
+                  number: 80
+          - path: /index
             pathType: Prefix
             backend:
               service:
-                name: default-http-backend
+                name: nginx-default-backend
                 port:
                   number: 80
