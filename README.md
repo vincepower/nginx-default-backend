@@ -2,7 +2,7 @@
 
 This is used to test ingress related things so I know for sure it is routing properly.
 
-Used in combination with the "Site A" and "Site B" instances.
+Used in combination with the "[Site A](https://github.com/vincepower/nginx-site-a/)" and "[Site B](https://github.com/vincepower/nginx-site-a/)" instances.
 
 I will rebuild every now and then so NGINX is up to date.
 
