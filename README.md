@@ -1,4 +1,4 @@
-# NGINX Default backend instance to use for a/b testing
+# NGINX Default backend instance to use for ingress validation
 
 This is used to test ingress related things so I know for sure it is routing properly.
 
